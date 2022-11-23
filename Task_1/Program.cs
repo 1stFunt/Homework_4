@@ -1,13 +1,12 @@
 ﻿// Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B. Без использования функции Math.Pow.
 
-int number1 = ReadInt("Введите первое число A: ");
-int number2 = ReadInt("Введите второе число B: ");
-int count = 1;
-int degree = number1;
-while (count < number2)
+int numberA = ReadInt("Введите первое число A: ");
+int numberB = ReadInt("Введите второе число B: ");
+int degree = numberA;
+for (int count = 1; count < numberB; count++)
 {
-    degree = degree * number1;
-    count++;
+    degree = degree * numberA;
+
 }
 Console.WriteLine(degree);
 int ReadInt(string message)
