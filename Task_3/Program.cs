@@ -6,9 +6,8 @@ int[] array = new int[number];
 
 void FillArray(int[] coll)
 {
-    int length = coll.Length;
     int index = 0;
-    while (index < length)
+    while (index < coll.Length)
     {
         coll[index] = new Random().Next(1, 100);
         index++;
@@ -16,18 +15,14 @@ void FillArray(int[] coll)
 }
 void PrintArray(int[] coll)
 {
-    int length = coll.Length;
     int index = 0;
-    while (index < length - 1)
+    Console.Write($"{number}->[");
+    while (index < coll.Length - 1)
     {
         Console.Write($"{coll[index]},");
         index++;
     }
-    if (index == length - 1)
-    {
-        Console.Write($"{coll[index]}]");
-    }
+    Console.Write($"{coll[index]}]");
 }
-Console.Write($"{number}->[");
 FillArray(array);
 PrintArray(array);
